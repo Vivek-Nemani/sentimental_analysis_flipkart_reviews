@@ -28,3 +28,12 @@
 
 ### Notes
 - To try more models (Naive Bayes, Linear SVM, RandomForest, LSTM/BERT), add experiments in new notebooks and reuse the saved vectorizer/tokenizer paths in `models/`.
+
+### MLflow (Experiment Tracking)
+- Notebook: `notebooks/mlflow_runs.ipynb` (logs TF-IDF + Logistic Regression runs).
+- Run the logging cells (or the provided script) after activating the venv.
+- Launch UI locally to inspect runs/metrics/artifacts:
+  ```
+  mlflow ui --backend-store-uri ./mlruns --port 5000
+  ```
+  Then open http://127.0.0.1:5000 and look for experiment `flipkart-sentiment`.
